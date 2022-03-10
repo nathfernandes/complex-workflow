@@ -4,7 +4,7 @@ on: push
 
 jobs:
   job1:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -13,7 +13,7 @@ jobs:
         run: date
 
   job2:
-    runs_on: windows-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -22,7 +22,7 @@ jobs:
         run: date
 
   job3:
-    runs_on: macos-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -31,7 +31,7 @@ jobs:
         run: date
   
   job4:
-    runs_on: ubuntu-18.04
+    runs-on: ubuntu-18.04
     needs: [job1, job2, job3]
     steps:
       - name: Checkout repository
